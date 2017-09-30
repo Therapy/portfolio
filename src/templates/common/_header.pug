@@ -1,0 +1,10 @@
+-
+  var items = [{href: "#", name: 'Обо мне'},
+    {href: "#", name: 'Проекты'},
+    {href: "#", name: 'Контакты'}];
+
+header.header
+  span.header__logo logo
+  nav.header__nav-list
+    each item in items
+      a.nav-list__item(href=item.href) #{item.name}
