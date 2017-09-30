@@ -1,5 +1,6 @@
 /node_modules
-/.vs_code
+/.vscode
+
 .jscsrc
 .jshintrc
 yarn-error.log
