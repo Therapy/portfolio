@@ -7,7 +7,7 @@ module.exports = () => {
     patterns.push({match: '%=version=%', replace: $.dev ? '' : `?rel=${$.package.version}`});//Math.ceil(Math.random()*100000)
 
     return $.gulp.src('./src/templates/pages/*.pug')
-      .pipe($.gp.pug({ pretty: true }))
+      .pipe($.gp.pug({pretty: true}))
       .on('error', $.gp.notify.onError((error) => {
         return {
           title: 'PUG',

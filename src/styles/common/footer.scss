@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    & .social {
+      position: relative;
+      display: inline-block;
+      font-size: 1.5em;
+      padding-right: 0.5em;
+      opacity: 0.6;
+    }
+  }
+
+  &__copyright {
+    opacity: 0.9;
+  }
+}

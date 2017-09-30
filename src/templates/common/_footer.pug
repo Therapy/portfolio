@@ -1,2 +1,10 @@
+-
+  var items = [{href: 'https://github.com/therapy', name: 'github'},
+    {href: 'https://vk.com/therapyspb', name: 'vk'}]
+
 footer.footer
-  .footer__copyright © therapy | with love | 2017
+  ul.footer__socials
+    each item in items
+      li.social: a.social__link(href=item.href): i(class='fa fa-' + item.name)
+
+  .footer__copyright with love by therapy | 2017

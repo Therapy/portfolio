@@ -7,8 +7,8 @@ global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {
-    task: require('./gulp/paths/tasks.js'),
-    app: require('./gulp/paths/app.js')
+    task: require('./gulp/paths/tasks'),
+    app: require('./gulp/paths/app')
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
@@ -36,8 +36,8 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'pug',
     'js',
-    'copy:image',
-    'copy:font'
+    'images',
+    'fonts'
   ),
   $.gulp.parallel(
     'watch',
@@ -51,7 +51,7 @@ $.gulp.task('build', $.gulp.series(
     'sass',
     'pug',
     'js',
-    'copy:image',
-    'copy:font'
+    'images',
+    'fonts'
   )
 ));

@@ -1,20 +1,9 @@
 extends ../_template
 
 block variables
-  - var title = 'about'
+  - var title = 'main'
 
 block content
   main.main
-    .main__left
-    .main__right
-      .about
-        .about__title about
-        p.about__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus rem quas repellat!
-
-        -
-          var items = [{href: "https://vk.com/therapyspb", name: 'vk'},
-            {href: "https://github.com/therapy", name: 'github'}]
-        
-        ul.socials
-          each item in items
-            li.social: a.social__link(href=item.href): i(class='fa fa-' + item.name)
+    .main__title main
+    p.main__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus rem quas repellat!
