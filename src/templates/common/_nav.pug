@@ -1,0 +1,7 @@
+-
+  var items = [{href: '#', name: 'Проекты'},
+    {href: '#', name: 'Обо мне'}];
+
+nav.navigation
+  each item in items
+    .navigation__item: a.item__link(href=item.href) #{item.name}

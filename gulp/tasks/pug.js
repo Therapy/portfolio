@@ -4,9 +4,9 @@ module.exports = () => {
   const patterns = [];
   $.gulp.task('pug', () => {
     patterns.push({match: '%=suffix=%', replace: $.dev ? '' : '.min'});
-    patterns.push({match: '%=version=%', replace: $.dev ? '' : `?rel=${$.package.version}`});//Math.ceil(Math.random()*100000)
+    patterns.push({match: '%=version=%', replace: $.dev ? '' : `?rel=${$.package.version}`});
 
-    return $.gulp.src('./src/templates/pages/*.pug')
+    return $.gulp.src($.path.app.pug)
       .pipe($.gp.pug({pretty: true}))
       .on('error', $.gp.notify.onError((error) => {
         return {

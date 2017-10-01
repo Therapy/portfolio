@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = {
-  src: './src/js/',
-  bundles: ['app.js']
+  js: './src/js/*.js',
+  scss: './src/styles/app.scss',
+  pug: './src/templates/pages/*.pug',
+  fonts: './src/fonts/**/*.*',
+  images: './src/images/**/ *.*'
 };

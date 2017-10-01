@@ -1,4 +1,12 @@
 .header {
-  flex: none;
-  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0 0 10vh;
+  &__title {
+    font-size: 1.5em;
+  }
+  &__description {
+    font-size: 0.75em;
+  }
 }

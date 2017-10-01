@@ -12,16 +12,12 @@ global.$ = {
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
-  merge: require('merge-stream'),
-  browserify: require('browserify'),
-  source: require('vinyl-source-stream'),
-  buffer: require('vinyl-buffer'),
   browserSync: require('browser-sync').create(),
   fs: require('fs'),
   gp: require('gulp-load-plugins')({
     rename: {
-      'gulp-replace-task': 'replaceTask',
-      'gulp-clean-css': 'cleanCSS'
+      'gulp-clean-css': 'cleanCSS',
+      'gulp-replace-task': 'replaceTask'
     }
   })
 };
@@ -33,7 +29,7 @@ $.path.task.forEach(function(taskPath) {
 $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
-    'sass',
+    'scss',
     'pug',
     'js',
     'images',
@@ -48,7 +44,7 @@ $.gulp.task('default', $.gulp.series(
 $.gulp.task('build', $.gulp.series(
   'clean',
   $.gulp.parallel(
-    'sass',
+    'scss',
     'pug',
     'js',
     'images',

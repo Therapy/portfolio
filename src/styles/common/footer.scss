@@ -1,15 +1,12 @@
 .footer {
   display: flex;
-  flex: none;
+  flex: 0 0 10vh;
   align-items: center;
   justify-content: space-evenly;
-
   &__socials {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     & .social {
-      position: relative;
-      display: inline-block;
       font-size: 1.5em;
       padding-right: 0.5em;
       opacity: 0.6;
@@ -17,6 +14,7 @@
   }
 
   &__copyright {
+    font-size: 0.75em;
     opacity: 0.9;
   }
 }

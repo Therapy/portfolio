@@ -4,8 +4,11 @@
 
 html,
 body {
+  display: flex;
   height: 100vh;
+  flex-direction: column;
   position: relative;
+  margin: 0;
   font-family: 'Tahoma Regular', Tahoma, sans-serif;
   font-size: 2vmin;
   color: $text;
@@ -14,11 +17,8 @@ body {
 
 .wrapper {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex: 0 0 80vh;
   margin: 0 auto;
-  overflow: hidden;
-  position: relative;
 }
 
 ul {

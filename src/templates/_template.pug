@@ -19,8 +19,8 @@ html
     script(src='/assets/js/app%=suffix=%.js%=version=%' defer)
 
   body
+    include common/_header.pug
     .wrapper
-      include common/_header.pug
-      include common/_aside.pug
       block content
-      include common/_footer.pug
+      include common/_nav.pug
+    include common/_footer.pug
