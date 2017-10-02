@@ -4,11 +4,12 @@
 
 html,
 body {
-  display: flex;
   height: 100vh;
-  flex-direction: column;
   position: relative;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   font-family: 'Tahoma Regular', Tahoma, sans-serif;
   font-size: 2vmin;
   color: $text;
@@ -16,9 +17,18 @@ body {
 }
 
 .wrapper {
+  max-width: 1000px;
+  flex: 1 100vh;
   display: flex;
-  flex: 0 0 80vh;
-  margin: 0 auto;
+  flex-flow: column wrap;
+  @media screen and (min-width: 1921px) {
+    max-width: 1600px;
+  }
+  &__content {
+    flex: 1 85vh;
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
 ul {

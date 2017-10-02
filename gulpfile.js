@@ -22,7 +22,7 @@ global.$ = {
   })
 };
 
-$.path.task.forEach(function(taskPath) {
+$.path.task.forEach((taskPath) => {
   require(taskPath)();
 });
 

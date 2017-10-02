@@ -1,18 +1,9 @@
 .footer {
+  flex: 1 0 5vh;
+  width: 100%;
   display: flex;
-  flex: 0 0 10vh;
   align-items: center;
-  justify-content: space-evenly;
-  &__socials {
-    display: flex;
-    flex-flow: row;
-    & .social {
-      font-size: 1.5em;
-      padding-right: 0.5em;
-      opacity: 0.6;
-    }
-  }
-
+  justify-content: center;
   &__copyright {
     font-size: 0.75em;
     opacity: 0.9;

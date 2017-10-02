@@ -1,12 +1,25 @@
 .header {
+  flex: 1 0 10vh;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex: 0 0 10vh;
+  flex-flow: column wrap;
   &__title {
     font-size: 1.5em;
   }
   &__description {
     font-size: 0.75em;
+  }
+  &__socials {
+    flex: none;
+    position: absolute;
+    top: 2.5vh;
+    right: 1vw;
+    display: flex;
+    flex-flow: row nowrap;
+    & .social {
+      font-size: 1.5em;
+      padding-right: 0.5em;
+      opacity: 0.6;
+    }
   }
 }
