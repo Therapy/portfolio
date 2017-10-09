@@ -1,18 +1,17 @@
 
-$aqua: #63a79a;
-$aqua-light: #71c4bc;
-$orange: #ff8043;
+$aqua: #63A79A;
+$aqua-light: #71C4BC;
+$orange: #FF8043;
 $text: #282828;
 $dot: #666565;
 
 //mixins
-@import "common/mixins";
+@import 'common/mixins';
 //common
-@import "common/common";
-@import "common/header";
-@import "common/nav";
-@import "common/footer";
+@import 'common/common';
+@import 'common/sidebar';
+@import 'common/footer';
 //pages
-@import "pages/index";
+@import 'pages/index';
 //fonts
-@import "common/fonts";
+@import 'common/fonts';

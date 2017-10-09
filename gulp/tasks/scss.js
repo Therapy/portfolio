@@ -12,6 +12,7 @@ module.exports = () => {
         };
       }))
       .pipe($.gp.autoprefixer({browsers: $.config.autoprefixerConfig}))
+      .pipe($.gp.postcss([$.sorting($.config.postCssConfig)]))
       .pipe($.gp.if(!$.dev, $.gp.cleanCSS()))
       .pipe($.gp.if($.dev, $.gp.sourcemaps.write()))
       .pipe($.gp.if(!$.dev, $.gp.rename({suffix: '.min'})))

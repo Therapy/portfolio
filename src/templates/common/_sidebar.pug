@@ -1,0 +1,26 @@
+-
+  var links = [{href: '#', name: 'Обо мне'},
+    {href: '#', name: 'Проекты'},
+    {href: '#', name: 'Контакты'}];
+-
+  var socials = [{href: 'https://github.com/therapy', name: 'github'},
+    {href: 'https://www.freecodecamp.org/therapy', name: 'free-code-camp'},
+    {href: 'https://t.me/therapyspb', name: 'telegram'},
+    {href: 'https://vk.com/therapyspb', name: 'vk'}];
+
+.sidebar
+  div.sidebar__profile
+    .profile__image
+      img
+    .profile__title
+      a.title__link(href='/') Ilya Klimov
+    .profile__description
+      p front-end developer
+
+  nav.sidebar__navigation
+    each link in links
+      .navigation-menu: a.navigation-menu__link(href=link.href) #{link.name}
+
+  ul.sidebar__social-icons
+    each social in socials
+      li.social: a.social__link(href=social.href target='_blank'): i(class='fa fa-' + social.name)

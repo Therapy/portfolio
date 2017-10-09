@@ -1,11 +1,11 @@
 .footer {
-  flex: 1 0 5vh;
-  width: 100%;
   display: flex;
   align-items: center;
+  flex: 1;
   justify-content: center;
   &__copyright {
-    font-size: 0.75em;
-    opacity: 0.9;
+    opacity: .9;
+
+    font-size: .75em;
   }
 }

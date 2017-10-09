@@ -1,7 +1,9 @@
-/node_modules
-/.vscode
-/build
+node_modules
+
+build
 
 .jscsrc
 .jshintrc
+.csscomb.json
+
 yarn-error.log

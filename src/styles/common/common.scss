@@ -4,36 +4,38 @@
 
 html,
 body {
-  height: 100vh;
-  position: relative;
-  margin: 0;
   display: flex;
-  justify-content: center;
   overflow: hidden;
+
+  max-height: 100vh;
+  margin: 0;
+
+  color: $text;
+  background-color: #E8EAF6;
+
   font-family: 'Tahoma Regular', Tahoma, sans-serif;
   font-size: 2vmin;
-  color: $text;
-  background-color: #e8eaf6;
 }
 
 .wrapper {
-  max-width: 1000px;
-  flex: 1 100vh;
   display: flex;
-  flex-flow: column wrap;
-  @media screen and (min-width: 1921px) {
-    max-width: 1600px;
-  }
+  flex-flow: row wrap;
   &__content {
-    flex: 1 85vh;
-    display: flex;
-    flex-flow: row wrap;
+    position: relative;
+    right: -17px;
+
+    overflow-y: auto;
+    flex: 1 6 80vw;
+    flex-flow: column wrap;
+
+    margin-left: -17px;
+    padding: 2vh;
   }
 }
 
 ul {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 li {
@@ -42,5 +44,6 @@ li {
 
 a {
   text-decoration: none;
-  color: #000000;
+
+  color: #000;
 }

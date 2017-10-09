@@ -1,0 +1,19 @@
+.sidebar {
+  display: flex;
+  flex: 1 5 20vw;
+  flex-flow: column wrap;
+  justify-content: space-around;
+
+  background-color: #A8C6D7;
+  &__profile {
+    padding-left: 2vw;
+  }
+  &__navigation {
+    padding-left: 2vw;
+  }
+  &__social-icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}

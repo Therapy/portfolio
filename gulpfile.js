@@ -12,6 +12,7 @@ global.$ = {
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
+  sorting: require('postcss-sorting'),
   browserSync: require('browser-sync').create(),
   fs: require('fs'),
   gp: require('gulp-load-plugins')({
