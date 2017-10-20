@@ -1,19 +1,84 @@
 .sidebar {
+  z-index: 0;
+
   display: flex;
   flex: 1 5 20vw;
   flex-flow: column wrap;
   justify-content: space-around;
 
-  background-color: #A8C6D7;
+  padding-left: 2vw;
+
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+
   &__profile {
-    padding-left: 2vw;
+    padding: 1vh;
+
+    & .profile__description {
+      font-size: .75rem;
+    }
   }
   &__navigation {
-    padding-left: 2vw;
+    & .navigation-menu {
+      position: relative;
+
+      padding: 1vh;
+      &:hover {
+        background-color: $hover;
+        & a {
+          color: #F4F5F6;
+        }
+        &::before {
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+
+          width: 100%;
+          height: 100%;
+
+          content: '';
+          transform: skewY(-1.5deg);
+          transform-origin: top right;
+
+          background-color: $hover;
+        }
+        &::after {
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+
+          width: 100%;
+          height: 100%;
+
+          content: '';
+          transform: skewY(1.5deg);
+          transform-origin: bottom right;
+
+          background-color: $hover;
+        }
+      }
+    }
   }
   &__social-icons {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+
+    padding: 1vh;
+
+    font-size: 1.5rem;
+    & .social {
+      margin-right: 1vw;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    & .social__link {
+      &:hover {
+        color: $hover;
+      }
+    }
   }
 }
