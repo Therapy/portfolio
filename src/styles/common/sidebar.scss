@@ -73,12 +73,13 @@
     font-size: 1rem;
     & .social {
       margin-right: 1vw;
+      margin-bottom: 1vw;
       & .social__link {
         & .fa {
           position: relative;
 
-          width: 40px;
-          height: 40px;
+          width: 45px;
+          height: 45px;
 
           transition: all cubic-bezier(.22, .61, .36, 1) .2s;
           text-align: center;
@@ -86,7 +87,7 @@
           color: #424242;
           border-radius: 50%;
 
-          line-height: 40px;
+          line-height: 45px;
 
           @include fa-hover(-github, #24292E);
           @include fa-hover(-free-code-camp, #006400);
@@ -118,11 +119,9 @@
             }
           }
         }
-        &:hover {
-          color: $hover;
-        }
       }
       &:last-child {
+        margin-bottom: 0;
         margin-right: 0;
       }
     }
@@ -135,7 +134,6 @@
     transform: scale(1);
 
     border-radius: 50%;
-    background-color: #9E9E9E;
   }
   30% {
     transform: scale(1.2);
