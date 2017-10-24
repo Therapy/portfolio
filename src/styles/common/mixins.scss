@@ -10,6 +10,14 @@
   }
 }
 
+@mixin fa-hover($social, $color) {
+  &#{$social}:hover {
+    &::after {
+      background-color: $color;
+    }
+  }
+}
+
 @mixin phones {
   @media (max-width: 480px) {
     @content;

@@ -9,9 +9,9 @@
   padding-left: 2vw;
 
   font-family: 'Oswald', sans-serif;
-  font-size: 1.25rem;
 
   &__profile {
+    font-size: 1.25rem;
     padding: 1vh;
 
     & .profile__description {
@@ -19,13 +19,14 @@
     }
   }
   &__navigation {
+    font-size: 1.25rem;
     & .navigation-menu {
       position: relative;
 
       padding: 1vh;
       &:hover {
         background-color: $hover;
-        & a {
+        .navigation-menu__link {
           color: #F4F5F6;
         }
         &::before {
@@ -67,18 +68,90 @@
     justify-content: flex-start;
 
     padding: 1vh;
+    height: 6.5vh;
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     & .social {
       margin-right: 1vw;
+      & .social__link {
+        & .fa {
+          position: relative;
+
+          width: 40px;
+          height: 40px;
+
+          transition: all cubic-bezier(.22, .61, .36, 1) .2s;
+          text-align: center;
+
+          color: #424242;
+          border-radius: 50%;
+
+          line-height: 40px;
+
+          @include fa-hover(-github, #24292E);
+          @include fa-hover(-free-code-camp, #006400);
+          @include fa-hover(-telegram, #08C);
+          @include fa-hover(-vk, #507299);
+          &::after {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            margin: auto;
+
+            content: '';
+
+            border-radius: 50%;
+            background-color: #9E9E9E;
+          }
+          &:hover {
+            color: #FFF;
+
+            font-size: 1.11rem;
+            &::after {
+              animation: social-icons cubic-bezier(.22, .61, .36, 1) .6s forwards;
+            }
+          }
+        }
+        &:hover {
+          color: $hover;
+        }
+      }
       &:last-child {
         margin-right: 0;
       }
     }
-    & .social__link {
-      &:hover {
-        color: $hover;
-      }
-    }
+  }
+}
+
+@keyframes social-icons {
+  0%,
+  20% {
+    transform: scale(1);
+
+    border-radius: 50%;
+    background-color: #9E9E9E;
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+
+    border-radius: 35%;
+  }
+  60%,
+  100% {
+    transform: scale(1);
+
+    border-radius: 25%;
   }
 }
