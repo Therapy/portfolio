@@ -78,8 +78,8 @@
         & .fa {
           position: relative;
 
-          width: 45px;
-          height: 45px;
+          width: 3vw;
+          height: 3vw;
 
           transition: all cubic-bezier(.22, .61, .36, 1) .2s;
           text-align: center;
@@ -87,7 +87,7 @@
           color: #424242;
           border-radius: 50%;
 
-          line-height: 45px;
+          line-height: 3vw;
 
           @include fa-hover(-github, #24292E);
           @include fa-hover(-free-code-camp, #006400);
