@@ -10,11 +10,9 @@
   }
 }
 
-@mixin fa-hover($social, $color) {
-  &#{$social}:hover {
-    &::after {
-      background-color: $color;
-    }
+@mixin hover-path($social, $color) {
+  &.#{$social}:hover path {
+    fill: $color;
   }
 }
 

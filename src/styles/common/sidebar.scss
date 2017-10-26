@@ -1,5 +1,5 @@
 .sidebar {
-  z-index: 0;
+  z-index: 3;
 
   display: flex;
   flex: 1 5 20vw;
@@ -11,16 +11,62 @@
   font-family: 'Oswald', sans-serif;
 
   &__profile {
-    font-size: 1.25rem;
     padding: 1vh;
 
-    & .profile__description {
+    font-size: 1.25rem;
+    .profile__image {
+      position: relative;
+      z-index: 9;
+
+      overflow: hidden;
+
+      width: 17vw;
+      height: 17vw;
+      margin-bottom: 2vw;
+
+      border-radius: 50%;
+      box-shadow: -16px 16px 0 8px rgba(0, 0, 0, .05), 16px 16px 0 8px rgba(0, 0, 0, .05), -16px -16px 0 8px rgba(0, 0, 0, .05), 16px -16px 0 8px rgba(0, 0, 0, .05);
+
+      filter: contrast(90%) sepia(20%);
+      &::before {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        content: '';
+        pointer-events: none;
+
+        border-radius: 50%;
+        background-image: radial-gradient(circle closest-corner, $text 20%, rgba(0, 0, 0, .2));
+
+        mix-blend-mode: overlay;
+      }
+      &:hover img {
+        transform: scale(1.25);
+      }
+      img {
+        position: relative;
+        z-index: 1;
+
+        width: 17vw;
+
+        transition: transform .3s ease-in-out;
+        transform-origin: 50% 0;
+      }
+    }
+    .profile__description {
       font-size: .75rem;
     }
   }
   &__navigation {
     font-size: 1.25rem;
-    & .navigation-menu {
+    .navigation-menu {
       position: relative;
 
       padding: 1vh;
@@ -68,88 +114,39 @@
     justify-content: flex-start;
 
     padding: 1vh;
-    height: 6.5vh;
 
-    font-size: 1rem;
-    & .social {
-      margin-right: 1vw;
-      margin-bottom: 1vw;
-      & .social__link {
-        & .fa {
-          position: relative;
+    .social {
+      margin-right: 1.5vw;
+      margin-bottom: 1.5vw;
 
-          width: 3vw;
-          height: 3vw;
+      @include hover-path(github, $github);
+      @include hover-path(freecodecamp, $freecodecamp);
+      @include hover-path(telegram, $telegram);
+      @include hover-path(vk, $vk);
 
-          transition: all cubic-bezier(.22, .61, .36, 1) .2s;
-          text-align: center;
+      .social__link {
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
 
-          color: #424242;
-          border-radius: 50%;
+          transition: transform .3s cubic-bezier(.5, -1, .2, 2.5);
 
-          line-height: 3vw;
+          background-color: $bg-color;
 
-          @include fa-hover(-github, #24292E);
-          @include fa-hover(-free-code-camp, #006400);
-          @include fa-hover(-telegram, #08C);
-          @include fa-hover(-vk, #507299);
-          &::after {
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+          path {
+            transition: fill .3s cubic-bezier(.5, -1, .2, 2.5);
 
-            width: 100%;
-            height: 100%;
-            margin: auto;
-
-            content: '';
-
-            border-radius: 50%;
-            background-color: #9E9E9E;
-          }
-          &:hover {
-            color: #FFF;
-
-            font-size: 1.11rem;
-            &::after {
-              animation: social-icons cubic-bezier(.22, .61, .36, 1) .6s forwards;
-            }
+            fill: $text;
           }
         }
       }
-      &:last-child {
-        margin-bottom: 0;
-        margin-right: 0;
+      &:hover svg {
+        transform: scale(1.5);
       }
     }
-  }
-}
-
-@keyframes social-icons {
-  0%,
-  20% {
-    transform: scale(1);
-
-    border-radius: 50%;
-  }
-  30% {
-    transform: scale(1.2);
-  }
-  40% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1);
-
-    border-radius: 35%;
-  }
-  60%,
-  100% {
-    transform: scale(1);
-
-    border-radius: 25%;
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
   }
 }
