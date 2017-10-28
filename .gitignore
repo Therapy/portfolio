@@ -1,9 +1,0 @@
-node_modules
-.vscode
-build
-
-.jscsrc
-.jshintrc
-.csscomb.json
-
-yarn-error.log
