@@ -6,7 +6,7 @@ html
     meta(charset='utf-8')
     title #{title}
     meta(content='Ilya Klimov' name='author')
-    meta(content='Front-end developer' name='description')
+    meta(content='Front-End developer' name='description')
     meta(content='front-end develop training coding' name='keywords')
     meta(content='width=device-width, initial-scale=1' name='viewport')
     meta(content='ie=edge' http-equiv='x-ua-compatible')
@@ -19,7 +19,8 @@ html
 
   body
     .wrapper
-      include common/_sidebar.pug
+      include common/_sidebar
       .wrapper__content
-        block content
-        include common/_footer.pug
+        if index
+          include common/_skills
+        include common/_footer

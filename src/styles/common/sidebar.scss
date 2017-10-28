@@ -2,31 +2,30 @@
   z-index: 3;
 
   display: flex;
-  flex: 1 5 20vw;
+  align-items: center;
+  flex: 1 5 40vw;
   flex-flow: column wrap;
   justify-content: space-around;
 
-  padding-left: 2vw;
-
-  font-family: 'Oswald', sans-serif;
-
+  min-height: 100vh;
   &__profile {
     padding: 1vh;
 
-    font-size: 1.25rem;
+    text-align: center;
     .profile__image {
       position: relative;
       z-index: 9;
 
       overflow: hidden;
 
-      width: 17vw;
-      height: 17vw;
-      margin-bottom: 2vw;
+      width: 240px;
+      height: 240px;
+      margin: 0 auto 35px;
 
       border-radius: 50%;
-      box-shadow: -16px 16px 0 8px rgba(0, 0, 0, .05), 16px 16px 0 8px rgba(0, 0, 0, .05), -16px -16px 0 8px rgba(0, 0, 0, .05), 16px -16px 0 8px rgba(0, 0, 0, .05);
+      box-shadow: -16px 16px 0 6px rgba(0, 0, 0, .05), 16px 16px 0 4px rgba(0, 0, 0, .05), -16px -16px 0 4px rgba(0, 0, 0, .05), 16px -16px 0 6px rgba(0, 0, 0, .05);
 
+      backface-visibility: hidden;
       filter: contrast(90%) sepia(20%);
       &::before {
         position: absolute;
@@ -54,69 +53,28 @@
         position: relative;
         z-index: 1;
 
-        width: 17vw;
+        width: 240px;
 
         transition: transform .3s ease-in-out;
         transform-origin: 50% 0;
       }
     }
+    .profile__title {
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
     .profile__description {
       font-size: .75rem;
+      font-weight: 400;
     }
   }
-  &__navigation {
-    font-size: 1.25rem;
-    .navigation-menu {
-      position: relative;
-
-      padding: 1vh;
-      &:hover {
-        background-color: $hover;
-        .navigation-menu__link {
-          color: #F4F5F6;
-        }
-        &::before {
-          position: absolute;
-          z-index: -1;
-          top: 0;
-          left: 0;
-
-          width: 100%;
-          height: 100%;
-
-          content: '';
-          transform: skewY(-1.5deg);
-          transform-origin: top right;
-
-          background-color: $hover;
-        }
-        &::after {
-          position: absolute;
-          z-index: -1;
-          top: 0;
-          left: 0;
-
-          width: 100%;
-          height: 100%;
-
-          content: '';
-          transform: skewY(1.5deg);
-          transform-origin: bottom right;
-
-          background-color: $hover;
-        }
-      }
-    }
-  }
-  &__social-icons {
+  &__social {
     display: flex;
+    align-items: center;
     flex-flow: row wrap;
-    justify-content: flex-start;
-
-    padding: 1vh;
-
-    .social {
-      margin-right: 1.5vw;
+    justify-content: space-around;
+    .icon {
+      margin-right: 2.5vw;
       margin-bottom: 1.5vw;
 
       @include hover-path(github, $github);
@@ -124,7 +82,10 @@
       @include hover-path(telegram, $telegram);
       @include hover-path(vk, $vk);
 
-      .social__link {
+      &__link {
+        &:hover svg {
+          transform: scale(1.5);
+        }
         svg {
           width: 1.5rem;
           height: 1.5rem;
@@ -140,13 +101,12 @@
           }
         }
       }
-      &:hover svg {
-        transform: scale(1.5);
-      }
     }
-    &:last-child {
-      margin-right: 0;
-      margin-bottom: 0;
-    }
+  }
+}
+@media (max-width: 1024px) {
+  .sidebar {
+    min-height: 0;
+    margin-top: 35px;
   }
 }

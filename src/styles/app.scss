@@ -5,13 +5,13 @@ $telegram: #2CA5E0;
 $vk: #6383A8;
 $bg-color: #F4F5F6;
 $text: #606C76;
-$hover: #9B4DCA;
 
 //mixins
 @import 'common/mixins';
 //common
 @import 'common/common';
 @import 'common/sidebar';
+@import 'common/skills';
 @import 'common/footer';
 //pages
 @import 'pages/index';
