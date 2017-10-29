@@ -17,8 +17,7 @@ global.$ = {
   fs: require('fs'),
   gp: require('gulp-load-plugins')({
     rename: {
-      'gulp-clean-css': 'cleanCSS',
-      'gulp-replace-task': 'replaceTask'
+      'gulp-clean-css': 'cleanCSS'
     }
   })
 };
@@ -52,3 +51,7 @@ $.gulp.task('build', $.gulp.series(
     'fonts'
   )
 ));
+
+$.gulp.task('deploy', () => $.gulp.src($.config.root + '**/*')
+  .pipe($.gp.ghPages())
+);
