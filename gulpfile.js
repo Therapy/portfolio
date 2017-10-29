@@ -52,6 +52,6 @@ $.gulp.task('build', $.gulp.series(
   )
 ));
 
-$.gulp.task('deploy', () => $.gulp.src($.config.root + '**/*')
+$.gulp.task('deploy', () => $.gulp.src($.config.root + '/**/*')
   .pipe($.gp.ghPages())
 );

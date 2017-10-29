@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
+  min-height: 80vh;
   width: 100%;
   max-width: 900px;
   margin-right: auto;
@@ -72,11 +73,11 @@
       }
       &::-moz-meter-bar {
         background: none;
-        background-color: #7A99AA;
+        background-color: $meter;
       }
       &::-webkit-meter-optimum-value {
         background: none;
-        background-color: #7A99AA;
+        background-color: $meter;
       }
     }
   }
