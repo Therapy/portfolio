@@ -1,10 +1,10 @@
 {
-  "name": "therapy.github.io",
+  "name": "site",
   "version": "0.2.0",
   "description": "portfolio",
   "main": "index.js",
-  "repository": "git@github.com:therapy/therapy.github.io.git",
-  "homepage": "https://therapy.github.io/therapy.github.io",
+  "repository": "git@github.com:therapy/site.git",
+  "homepage": "https://therapy.github.io/site",
   "author": "Therapy <therapyspb@yandex.ru>",
   "license": "MIT",
   "scripts": {
