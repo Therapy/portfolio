@@ -23,7 +23,7 @@
       margin: 0 auto 35px;
 
       border-radius: 50%;
-      box-shadow: -16px 16px 0 6px rgba(0, 0, 0, .05), 16px 16px 0 4px rgba(0, 0, 0, .05), -16px -16px 0 4px rgba(0, 0, 0, .05), 16px -16px 0 6px rgba(0, 0, 0, .05);
+      box-shadow: -16px 10px 0 6px rgba(0, 0, 0, .05), 10px 16px 0 4px rgba(0, 0, 0, .05), -16px -10px 0 4px rgba(0, 0, 0, .05), 10px -16px 0 6px rgba(0, 0, 0, .05);
 
       backface-visibility: hidden;
       filter: contrast(90%) sepia(20%);
@@ -108,5 +108,23 @@
   .sidebar {
     min-height: 0;
     margin-top: 35px;
+    &__profile .profile__image {
+      width: 200px;
+      height: 200px;
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
+@media (min-width: 2560px) {
+  .sidebar {
+    &__profile .profile__image {
+      width: 340px;
+      height: 340px;
+      img {
+        width: 340px;
+      }
+    }
   }
 }

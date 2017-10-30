@@ -17,7 +17,7 @@ body {
 
 .wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   &__content {
     position: relative;
 
@@ -44,4 +44,9 @@ a {
   text-decoration: none;
 
   color: $text;
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
 }
