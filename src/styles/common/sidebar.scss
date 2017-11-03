@@ -7,12 +7,12 @@
   flex-flow: column wrap;
   justify-content: space-around;
 
-  min-height: 100vh;
+  min-height: 80vh;
   &__profile {
     padding: 1vh;
 
     text-align: center;
-    .profile__image {
+    & > .profile__image {
       position: relative;
       z-index: 9;
 
@@ -46,10 +46,10 @@
 
         mix-blend-mode: overlay;
       }
-      &:hover img {
+      &:hover > img {
         transform: scale(1.25);
       }
-      img {
+      & > img {
         position: relative;
         z-index: 1;
 
@@ -59,11 +59,11 @@
         transform-origin: 50% 0;
       }
     }
-    .profile__title {
+    & > .profile__title {
       font-size: 1.25rem;
       font-weight: 400;
     }
-    .profile__description {
+    & > .profile__description {
       font-size: .75rem;
       font-weight: 400;
     }
@@ -73,7 +73,7 @@
     align-items: center;
     flex-flow: row wrap;
     justify-content: space-around;
-    .icon {
+    & .icon {
       margin-right: 2.5vw;
       margin-bottom: 1.5vw;
 
@@ -83,10 +83,10 @@
       @include hover-path(vk, $vk);
 
       &__link {
-        &:hover svg {
+        &:hover > svg {
           transform: scale(1.5);
         }
-        svg {
+        & > svg {
           width: 1.5rem;
           height: 1.5rem;
 
@@ -94,7 +94,7 @@
 
           background-color: $bg-color;
 
-          path {
+          & > path {
             transition: fill .3s cubic-bezier(.5, -1, .2, 2.5);
 
             fill: $text;
@@ -108,10 +108,10 @@
   .sidebar {
     min-height: 0;
     margin-top: 35px;
-    &__profile .profile__image {
+    &__profile > .profile__image {
       width: 200px;
       height: 200px;
-      img {
+      & > img {
         width: 200px;
       }
     }
@@ -119,10 +119,10 @@
 }
 @media (min-width: 2560px) {
   .sidebar {
-    &__profile .profile__image {
+    &__profile > .profile__image {
       width: 340px;
       height: 340px;
-      img {
+      & > img {
         width: 340px;
       }
     }

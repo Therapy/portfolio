@@ -2,14 +2,15 @@
   "name": "site",
   "version": "0.3.1",
   "description": "portfolio",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "git@github.com:therapy/site.git",
   "homepage": "https://therapy.github.io/site",
   "author": "Therapy <therapyspb@yandex.ru>",
   "license": "MIT",
   "scripts": {
     "start": "set NODE_ENV=development&& gulp",
-    "build": "set NODE_ENV=production&& gulp build"
+    "build": "set NODE_ENV=production&& gulp build",
+    "deploy": "yarn run build&& gulp deploy"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
