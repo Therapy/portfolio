@@ -1,6 +1,6 @@
 {
   "name": "site",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "portfolio",
   "main": "index.html",
   "repository": "git@github.com:therapy/site.git",
