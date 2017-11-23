@@ -1,7 +1,7 @@
 block variables
 
 doctype html
-html
+html(lang='en')
   head
     meta(charset='utf-8')
     title #{title}
@@ -14,7 +14,7 @@ html
     //- favicon block start
     //- favicon block end
 
-    link(rel='stylesheet' href='./assets/css/app%=suffix=%.css%=version=%')
+    link(rel='stylesheet' href='./assets/css/app%=suffix=%.css%=version=%' media='screen')
     script(src='./assets/js/app%=suffix=%.js%=version=%' defer)
 
   body

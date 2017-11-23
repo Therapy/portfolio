@@ -16,4 +16,4 @@
 
   ul.sidebar__social
     each social in socials
-      li.icon(class='icon__' + social.name): a.icon__link(href=social.href target='_blank'): svg(viewBox='0 0 24 24' role='img'): path(d=social.svg_path)
+      li.icon(class='icon__' + social.name): a.icon__link(href=social.href target='_blank' rel='noopener'): svg(viewBox='0 0 24 24' role='img' alt=social.name + ' icon'): path(d=social.svg_path)
