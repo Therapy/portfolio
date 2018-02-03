@@ -82,11 +82,13 @@
     }
   }
 }
+
 @media (min-width: 2560px) {
   .skills {
     max-width: 1200px;
   }
 }
+
 @media (min-width: 1025px) {
   .skill:nth-of-type(odd) {
     padding-right: 1rem;
@@ -95,6 +97,7 @@
     padding-left: 1rem;
   }
 }
+
 @media (max-width: 1024px) {
   .skill {
     max-width: 100% !important;
