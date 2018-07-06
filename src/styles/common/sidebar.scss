@@ -90,12 +90,12 @@
           width: 1.5rem;
           height: 1.5rem;
 
-          transition: transform .3s cubic-bezier(.5, -1, .2, 2.5);
+          transition: transform .4s cubic-bezier(.5, -1, .2, 2.5);
 
           background-color: $bg-color;
 
           & > path {
-            transition: fill .3s cubic-bezier(.5, -1, .2, 2.5);
+            transition: fill .4s cubic-bezier(.5, -1, .2, 2.5);
 
             fill: $text;
           }
