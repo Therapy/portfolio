@@ -79,6 +79,8 @@
 
       @include hover-path(github, $github);
       @include hover-path(freecodecamp, $freecodecamp);
+      @include hover-path(codepen, $codepen);
+      @include hover-path(codewars, $codewars);
       @include hover-path(telegram, $telegram);
       @include hover-path(vk, $vk);
 
@@ -90,13 +92,11 @@
           width: 1.5rem;
           height: 1.5rem;
 
-          transition: transform .3s cubic-bezier(0.5, -1, 0.2, 2.5);
+          transition: transform .3s ease-out;
 
           background-color: $bg-color;
 
           & > path {
-            transition: fill .3s cubic-bezier(0.5, -1, 0.2, 2.5);
-
             fill: $text;
           }
         }
